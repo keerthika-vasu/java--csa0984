@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*; 
+class cuboid {
+int area,vol,l,b,h;
+void s_cuboid(){
+Scanner s=new Scanner(System.in);
+l=s.nextInt();
+b=s.nextInt();
+h=s.nextInt();
+vol=l*b*h;
+System.out.println("volume :"+vol+" sq.units");
+}
+}
+class rectangle extends cuboid{
+void s_rectangle(){
+super.s_cuboid();
+area=l*b;
+System.out.println("area :"+area+" cm");
+}
+}
+class shapes{
+public static void main(String[] args) {
+rectangle x=new rectangle();
+x.s_rectangle();
+
+}
+}
