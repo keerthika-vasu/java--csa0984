@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+class Master {
+    int salary, emp_id, bonus, t_salary;
+    String name;
+
+    void getdata() {
+        Scanner s = new Scanner(System.in);
+        name = s.nextLine();
+        emp_id = s.nextInt();
+        salary = s.nextInt();
+        bonus = s.nextInt();
+    }
+}
+
+class Admin extends Master {
+    void display() {
+        super.getdata();
+        System.out.println("Employee name: " + name);
+        System.out.println("Emp_id: " + emp_id);
+        System.out.println("Salary: " + salary);
+    }
+}
+
+class Account extends Admin {
+    void e_bonus() {
+        super.display();
+        t_salary = salary + (salary * bonus / 100);
+        System.out.println("Salary with bonus: $" + t_salary);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Account x = new Account();
+        x.e_bonus();
+    }
+}
