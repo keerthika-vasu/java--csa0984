@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*; 
+class addamount {
+int amount=50,add,add2,money;
+void bank(){
+Scanner s=new Scanner(System.in);
+money=s.nextInt();
+}
+}
+class account extends addamount{
+void bank(){
+super.bank();
+add=amount+0;
+System.out.println("piggy bank :"+add+"$");
+}
+}
+class accounts extends account{
+void bank(){
+super.bank();
+add2=amount+money;
+System.out.println("piggy bank :"+add2+"$");
+}
+}
+class actual{
+public static void main(String[] args) {
+accounts x=new accounts();
+x.bank();
+}
+}
